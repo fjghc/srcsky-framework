@@ -1,0 +1,33 @@
+<div class="product-nav-stage" ng-show="navScene" ng-class="{'product-nav-stage-main':navScene=='main','product-nav-stage-sub':navScene=='sub'}">
+  <div class="product-nav-scene product-nav-main-scene">
+    <div class="product-nav-title" ng-bind="config.title"></div><!-- 自定义内容插入点，比如商标、logo -->
+    <div customized-content></div>
+    <div class="product-nav-list">
+      <ul>
+        <li ng-repeat="item in config.mainNav" class="{{item.cls}}" ng-class="{'active':checkActive(item,'main')&&!item.showChild,'nav-showchild':item.showChild}">
+          <div product-nav-link item="item"></div>
+          <ul ng-if="item.childs" ng-show="item.showChild">
+            <li ng-repeat="child in item.childs" class="{{child.cls}}" ng-class="{active:checkActive(child,'main')}">
+              <div product-nav-link item="child"></div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="product-nav-scene product-nav-sub-scene">
+    <div class="product-nav-title"><a href="javascript:void(0);" class="nav-icon" ng-click="backNav()" ng-if="config.backNav"><span class="icon-left"></span></a></div>
+    <div class="product-nav-list">
+      <ul>
+        <li ng-repeat="item in config.subNav" class="{{item.cls}}" ng-class="{'active':checkActive(item,'sub')&&!item.showChild,'nav-showchild':item.showChild}">
+          <div product-nav-link item="item"></div>
+          <ul ng-if="item.childs" ng-show="item.showChild">
+            <li ng-repeat="childItem in item.childs" class="{{childItem.cls}}" ng-class="{active:checkActive(childItem,'sub')}">
+              <div product-nav-link item="childItem"></div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>'

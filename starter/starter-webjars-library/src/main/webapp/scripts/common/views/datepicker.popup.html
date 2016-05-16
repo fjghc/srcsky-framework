@@ -1,0 +1,12 @@
+<ul class="dropdown-menu" dropdown-nested ng-if="isOpen" style="display: block" ng-style="{top: position.top+'px', left: position.left+'px'}" ng-keydown="keydown($event)"
+    ng-click="$event.stopPropagation()">
+  <li ng-transclude></li>
+  <li ng-if="showButtonBar" style="padding:4px 16px 8px; display: block">
+	<!--<span class="btn-group pull-left">-->
+		<button type="button" class="btn btn-sm btn-danger" ng-click="select('today')" ng-disabled="isDisabled('today')">{{ getText('current') }}</button>
+    <button type="button" class="btn btn-sm btn-danger" data-ng-class="{active: _showWeeks}" ng-click="showWeeks()">周</button>
+    <button type="button" class="btn btn-sm btn-danger" ng-click="select(null)">{{ getText('clear') }}</button>
+	<!--</span>-->
+    <button type="button" class="btn btn-sm btn-success pull-right" ng-click="close()">{{ getText('close') }}</button>
+  </li>
+</ul>

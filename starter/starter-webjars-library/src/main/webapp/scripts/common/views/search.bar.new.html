@@ -1,0 +1,53 @@
+<form role="form" class="form-inline">
+    <div class="form-group" ng-if="options.showDate">
+        <select class="form-control"
+                ng-options="item.name for item in expireSelectOptions"
+                ng-model="formData.expireSelected"
+                ng-change="expireChangeValue(formData.expireSelected)"
+                ng-disabled="ngDisabled"></select>
+        <input
+                ng-show="formData.expireSelected.value == 'custom'"
+                type="text"
+                ng-disabled="ngDisabled"
+                min="expireStartDate"
+                max="expireMaxDate"
+                class="form-control date-picker-unit margin-left-1"
+                show-weeks="false"
+                show-button-bar="false"
+                datepicker-popup="yyyy-MM-dd" ng-model="formData.beginEndTime" size="12">
+        <input ng-show="formData.expireSelected.value == 'custom'"
+               type="text"
+               ng-disabled="ngDisabled"
+               min="expireStartDateNextDay"
+               max="expireMaxDate"
+               class="form-control date-picker-unit margin-left-1"
+               show-weeks="false"
+               show-button-bar="false"
+               datepicker-popup="yyyy-MM-dd"
+               ng-model="formData.endEndTime"
+               size="12"/>
+    </div>
+    <div class="form-group" ng-if="options.showRegion">
+        <select class="form-control"
+                ng-options="item.name for item in regionOptions"
+                ng-model="formData.regionName"
+                ng-disabled="ngDisabled"></select>
+    </div>
+    <div class="form-group" ng-if="options.showSearchType">
+        <select class="form-control"
+                ng-options="item.name for item in searchTypeOptions"
+                ng-model="formData.searchType"
+                ng-disabled="ngDisabled"></select>
+    </div>
+    <div class="form-group" ng-if="options.showKeyword">
+        <input type="text"
+               class="form-control"
+               ng-model="response.keyword"
+               size="48"
+               placeholder="{{options.placeholder}}"
+               ng-disabled="ngDisabled">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-default" ng-click="onSubmit()" ng-bind="options.btnText||defaultSearchButtonText" ng-disabled="ngDisabled"></button>
+    </div>
+</form>

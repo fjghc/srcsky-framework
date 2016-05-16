@@ -1,0 +1,18 @@
+.framework-topbar {position: fixed;width: 100%;height: 50px;background: #09C;z-index: 101}
+.framework-body {position: absolute;width: 100%;top: 50px;bottom: 0px;background-color: #000;z-index: 100;
+  -o-transition: all 0.2s ease, 0.2s ease;
+  -ms-transition: all 0.2s ease, 0.2s ease;
+  -moz-transition: all 0.2s ease, 0.2s ease;
+  -webkit-transition: all 0.2s ease, 0.2s ease;}
+.framework-body .console-global-notice .console-global-notice-nav {top: 14px}
+.framework-body .console-global-notice .console-global-notice-list {margin: 0;height: 40px}
+.framework-body .console-global-notice .console-global-notice-list .console-global-notice-item {padding: 11px 12px;border: none}
+.framework-body .console-global-notice .console-global-notice-list .console-global-notice-item .console-global-notice-nomore {top: 10px}
+.framework-body.framework-topbar-hide {top: 0px}
+.framework-body.framework-topbar-hide .framework-sidebar {top: 0px}
+
+
+.framework-animate {-webkit-animation-duration: 0.1s;animation-duration: 0.1s;-webkit-animation-fill-mode: both;animation-fill-mode: both}
+.framework-fadeIn {-webkit-animation-name: frameworkFadeIn;animation-name: frameworkFadeIn}
+@-webkit-keyframes frameworkFadeIn {0% {opacity: 0}100% {opacity: 1}}
+@keyframes frameworkFadeIn {0% {opacity: 0}100% {opacity: 1}}

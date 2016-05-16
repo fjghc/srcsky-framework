@@ -1,0 +1,30 @@
+<div class="framework-sidebar-manage">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" data-ng-click="close(false)" aria-hidden="true">&times;</button>
+    <h5 class="modal-title" ng-bind="title"></h5></div>
+  <div class="modal-body">
+    <div class="sidebar-config-title" ng-bind="messages['pickedArea']"></div>
+    <div class="sidebar-item-list sidebar-item-list-picked clearfix">
+      <div class="sidebar-item-wrap" ng-repeat="item in pickedItems" ui-draggable="true" drag="item" on-drop-success="dropSuccessHandler($event,$data,$index,item)"
+           ui-on-drop="onDrop($event, $data, $index, item)" ui-on-drag-over="dragover($index,item)">
+        <div class="sidebar-item"><span class="sidebar-item-icon {{allItemsMap[item].icon}}"></span> <span class="sidebar-item-text">{{allItemsMap[item].name}}&nbsp;{{allItemsMap[item].shortName}}</span>
+          <span class="sidebar-item-opt-icon icon-no" ng-click="clickHandler(item)"></span></div>
+      </div>
+    </div>
+    <div class="sidebar-config-gap"></div>
+    <div class="sidebar-config-title" ng-bind="messages['allItems']"></div>
+    <div class="sidebar-item-list clearfix">
+      <div class="sidebar-item-wrap" ng-repeat="item in allItems" ng-hide="item.selected">
+        <div class="sidebar-item" ng-class="{'sidebar-product-selected':item.selected}" ng-click="clickHandler(item.productId)"><span
+          class="sidebar-item-icon {{item.icon}}"></span> <span class="sidebar-item-text">{{item.name}}&nbsp;{{item.shortName}}</span> <span class="sidebar-item-opt-icon icon-add"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-if="pickedItems.length > 0" data-ng-click="setUserConfig()" ng-bind="messages['confirm']"></button>
+    <div class="inline-block margin-right" ng-if="pickedItems.length == 0" uibTooltip="{{messages['errorTooltip']}}" tooltip-append-to-body="false">
+      <button class="btn btn-primary" disabled="disabled" ng-bind="messages['confirm']"></button>
+    </div>
+    <button class="btn btn-default" data-ng-click="close(false)" ng-bind="messages['cancel']"></button>
+  </div>
+</div>

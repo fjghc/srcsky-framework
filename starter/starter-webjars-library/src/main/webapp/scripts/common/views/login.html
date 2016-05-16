@@ -1,0 +1,38 @@
+<div class="login-container">
+    <div class="container" ng-keyup="keyup($event)">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1 class="title">系统登录控制台</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 form-box">
+                <div class="form-top">
+                    <div class="form-top-left">
+                        <h3>登录</h3>
+
+                        <p>请输入您的帐号进行登录！</p>
+                    </div>
+                    <div class="form-top-right">
+                        <i class="icon-account"></i>
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <form role="form" class="login-form">
+                        <div class="form-group">
+                            <label class="sr-only" for="username">用户名</label>
+                            <input type="text" data-ng-model="username" placeholder="用户名" class="form-control"
+                                   id="username">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="password">密码</label>
+                            <input type="password" data-ng-model="password" placeholder="密码" class="form-control"
+                                   id="password">
+                        </div>
+                        <button type="button" class="btn" ng-click="submit()(ctrl.$scope)">登录</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

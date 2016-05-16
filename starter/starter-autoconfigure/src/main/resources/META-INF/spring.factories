@@ -1,0 +1,16 @@
+# ◊‘∂Ø≈‰÷√ Spring Session,Spring Mvc Spring Controller
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.srcskyframework.starter.db.DbAutoConfiguration,\
+com.srcskyframework.starter.mvc.MvcAutoConfiguration,\
+com.srcskyframework.starter.kafka.KafkaConsumeAutoConfiguration,\
+com.srcskyframework.starter.kafka.KafkaProduceAutoConfiguration,\
+com.srcskyframework.starter.session.SessionAutoConfiguration,\
+com.srcskyframework.starter.session.DisableDefaultSessionAutoConfiguration,\
+com.srcskyframework.starter.dubbo.DubboAutoConfiguration,\
+com.srcskyframework.starter.dubbo.DubboAnnotationConfiguration,\
+com.srcskyframework.starter.user.UserAutoConfiguration,\
+com.srcskyframework.starter.sso.SsoAutoConfiguration,\
+com.srcskyframework.starter.space.SpaceAutoConfiguration,\
+com.srcskyframework.starter.auth.AuthAutoConfiguration,\
+com.srcskyframework.starter.h5.H5AutoConfiguration,\
+com.srcskyframework.starter.freemarker.FreemarkerAutoConfiguration

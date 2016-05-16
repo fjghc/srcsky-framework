@@ -1,0 +1,16 @@
+<div ng-if="showDropdown" class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <span ng-transclude></span>
+    <span>{{selectItem.selectedText? selectItem.selectedText :'('+selectItem.text+')'}}</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu console-table-search-list">
+    <li ng-repeat="item in items">
+      <a href="javascript:" ng-click="search(item)">
+        <span class="icon-yes" ng-if="selectItem == item"></span>
+        <span>{{item.text}}</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<span ng-if="!showDropdown" ng-transclude></span>

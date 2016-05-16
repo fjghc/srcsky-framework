@@ -1,0 +1,146 @@
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0; /*中间状态 透明度为0*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+
+.slide-top {
+    -webkit-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    transition: all 0 cubic-bezier(0.25, .46, .45, .94)
+}
+
+.slide-top.ng-enter {
+    -webkit-transform: translateY(60px) scale(1);
+    transform: translateY(60px) scale(1);
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0
+}
+
+.slide-top.ng-enter-active {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1
+}
+
+.slide-top.ng-leave {
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms
+}
+
+.slide-top.ng-leave-active {
+    -webkit-transform: translateY(60px) scale(1);
+    transform: translateY(60px) scale(1);
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0
+}
+
+.slide-down {
+    -webkit-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -moz-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -ms-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -o-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -webkit-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    -moz-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    -ms-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    -o-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    transition-timing-function: cubic-bezier(0.25, .46, .45, .94)
+}
+
+.slide-down.ng-enter {
+    transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -webkit-transform: translateY(-60px);
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    opacity: 0
+}
+
+.slide-down.ng-enter-active {
+    transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    opacity: 1
+}
+
+.slide-down.ng-leave {
+    transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    opacity: 1
+}
+
+.slide-down.ng-leave-active {
+    transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -webkit-transform: translateY(-60px);
+    opacity: 0
+}
+
+.scale-fade {
+    -webkit-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -moz-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -ms-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -o-transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    transition: all 0 cubic-bezier(0.25, .46, .45, .94);
+    -webkit-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    -moz-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    -ms-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    -o-transition-timing-function: cubic-bezier(0.25, .46, .45, .94);
+    transition-timing-function: cubic-bezier(0.25, .46, .45, .94)
+}
+
+.scale-fade.ng-enter {
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    transition-duration: 150ms;
+    -webkit-transition-duration: 150ms;
+    opacity: 0
+}
+
+.scale-fade.ng-enter-active {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1
+}
+
+.scale-fade.ng-leave {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transition-duration: 150ms;
+    -webkit-transition-duration: 150ms;
+    opacity: 1
+}
+
+.scale-fade.ng-leave-active {
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    opacity: 0
+}

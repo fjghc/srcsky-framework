@@ -1,0 +1,56 @@
+.selector {
+    width: 100%;
+    height: 140px;
+    border: 1px solid #999;
+    background-color: #FFF;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.selector .selector-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px
+}
+
+.selector .selector-list .selector-item {
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    border-bottom: 1px solid #DDD;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-indent: 8px
+}
+
+.selector .selector-list .selector-item:hover {
+    color: #06C;
+    background-color: #FAFCFF;
+    cursor: pointer
+}
+
+.selector .selector-list .selector-item.active {
+    background-color: #37C;
+    color: #FFF
+}
+
+.selector .selector-list .selector-item.disabled {
+    color: #AAA;
+    cursor: not-allowed;
+    background-color: #FAFAFA
+}
+
+.selector .selector-msg {
+    text-align: center;
+    color: #999;
+    height: 32px;
+    line-height: 32px
+}
+
+.selector.selector-status-error .selector-msg {
+    cursor: pointer
+}
+
+.selector.selector-status-hasmore .selector-msg {
+    cursor: pointer
+}

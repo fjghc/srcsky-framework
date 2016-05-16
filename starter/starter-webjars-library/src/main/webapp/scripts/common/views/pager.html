@@ -1,0 +1,25 @@
+<div>
+  <div class="pagination-info" ng-hide="config.tipHide">
+    <span>共有{{config.total}}条</span>，
+    <span>每页显示：{{config.size}}条</span>
+  </div><div ng-show="config.total"
+       ng-change="pageChangedHandler()"
+       uib-pagination
+       boundary-links="true"
+       data-ng-model="config.page"
+       max-size="config.maxSize"
+       total-items="config.total"
+       items-per-page="config.size"
+       previous-text="&lsaquo;"
+       next-text="&rsaquo;"
+       first-text="&laquo;"
+       last-text="&raquo;">
+  </div><span data-ng-show="config.showGotoPage" style="padding-left: 10px;padding-right: 15px;"><input type="text"
+           data-ng-model="gotoPage"
+           class="form-control"
+           number-range
+           value-min="1"
+           value-max="{{config.totalPage}}"
+           style="width: 40px; display: inline-block; padding-right: 5px"><button class="btn btn-default" style="padding: 8px 8px;margin-left: 6px" data-ng-disabled="config.gotoPageBtnDisabled" data-ng-click="go()">GO</button>
+  </span>
+</div>

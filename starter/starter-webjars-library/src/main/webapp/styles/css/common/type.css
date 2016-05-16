@@ -1,0 +1,16 @@
+
+select {
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc
+}
+
+select.input-lg, .input-lg {
+  height: 40px
+}
+
+select.input-sm, .input-sm {
+  height: 24px
+}

@@ -1,0 +1,92 @@
+<div>
+  <div class="sidebar-inner" ng-if="!loadingState">
+    <div class="sidebar-fold" ng-class="{'icon-unfold':config.sidebar=='full','icon-fold':config.sidebar=='mini'}" ng-click="toggleSidebarStatus()"></div>
+    <div class="sidebar-nav main-nav" ng-class="{'sidebar-nav-fold':navConfig.product.folded}" ng-show="navConfig.product.show">
+      <div class="sidebar-title" ng-click="toggleFoldStatus($event,navConfig.product)">
+        <div class="sidebar-title-inner" sidebar-tooltip="{{type =='mini'?navConfig.product.title:''}}" tooltip-append-to-body="true" tooltip-placement="right" tooltip-animation="true">
+          <span class="sidebar-title-icon icon-arrow-down"></span>
+          <span class="sidebar-title-text" ng-bind="navConfig.product.title"></span>
+          <span class="sidebar-manage"
+                ng-show="navConfig.product.showManageButton"
+                sidebar-tooltip="{{navConfig.product.popover}}"
+                tooltip-append-to-body="true"
+                tooltip-placement="right"
+                tooltip-animation="true">
+            <a class="icon-setup"
+               console-sidebar-manage
+               picked-items="productPreference"
+               items="products"
+               type="product"
+               requesturl="navConfig.requestUrl.setUserPreference"
+               title="{{navConfig.product.dialogTitle}}"
+               locale="{{locale}}"></a>
+          </span>
+        </div>
+      </div>
+      <ul class="sidebar-trans" ng-style="{height:productHeight}">
+        <li ng-repeat="item in productList track by $index" class="nav-item" ng-class="{'active':productId == item.productId}">
+          <a href="{{item.link}}"
+             class="sidebar-trans"
+             sidebar-tooltip="{{type =='mini'?item.name+'&nbsp;'+item.shortName:''}}"
+             tooltip-append-to-body="true" tooltip-placement="right"
+             tooltip-animation="true">
+            <div class="nav-icon sidebar-trans"><span class="{{item.icon}}"></span></div>
+            <span class="nav-title">{{item.name}}&nbsp;{{item.shortName}}</span></a>
+        </li>
+        <li class="current-nav active nav-item" ng-if="productsMap[productId] && currentEntry">
+          <a href="{{currentEntry.link}}"
+             class="sidebar-trans"
+             sidebar-tooltip="{{type =='mini'?currentEntry.name+'&nbsp'+currentEntry.shortName:''}}"
+             tooltip-append-to-body="true" tooltip-placement="right" tooltip-animation="true">
+            <div class="nav-icon sidebar-trans"><span class="{{currentEntry.icon}}"></span></div>
+            <span class="nav-title">{{currentEntry.title}}&nbsp;{{currentEntry.shortName}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-nav" ng-class="{'sidebar-nav-fold':navConfig.service.folded}" ng-show="navConfig.service.show">
+      <div class="sidebar-title" ng-click="toggleFoldStatus($event,navConfig.service)">
+        <div class="sidebar-title-inner" sidebar-tooltip="{{type =='mini'?navConfig.service.title:''}}" tooltip-append-to-body="true" tooltip-placement="right" tooltip-animation="true">
+          <span class="sidebar-title-icon"><span class="icon-arrow-down"></span></span>
+          <span class="sidebar-title-text" ng-bind="navConfig.service.title"></span>
+          <span class="sidebar-manage" ng-show="navConfig.service.showManageButton" sidebar-tooltip="{{navConfig.service.popover}}" tooltip-append-to-body="true" tooltip-placement="right"
+                tooltip-animation="true">
+            <a class="icon-setup"
+               console-sidebar-manage
+               picked-items="servicePreference"
+               items="services"
+               type="service"
+               requesturl="navConfig.requestUrl.setUserPreference"
+               title="{{navConfig.service.dialogTitle}}"
+               locale="{{locale}}"></a>
+          </span>
+        </div>
+      </div>
+      <ul class="entrance-nav sidebar-trans" ng-style="{height:serviceHeight}">
+        <li ng-repeat="item in serviceList" class="nav-item" ng-class="{'active':productId == item.productId}">
+          <a href="{{item.link}}"
+             sidebar-tooltip="{{type =='mini'?item.name + (item.isOldVersion?'&nbsp;('+ messages['common.directive.sidebar.backToOld']+')':'') : ''}}"
+             tooltip-append-to-body="true" tooltip-placement="right" tooltip-animation="true">
+            <div class="nav-icon"><span class="{{item.icon}}"></span></div>
+            <span class="nav-title">{{item.name}}</span>
+            <span class="nav-comment nav-comment-ho" ng-if="item.isOldVersion">
+              <span class="icon-arrow-left"></span>
+              {{messages['common.directive.sidebar.backToOld']}}
+            </span>
+          </a>
+        </li>
+        <li class="current-nav active nav-item" ng-if="servicesMap[productId] && currentEntry">
+          <a href="{{currentEntry.link}}"
+             class="sidebar-trans"
+             sidebar-tooltip="{{type =='mini'?currentEntry.name:''}}"
+             tooltip-append-to-body="true"
+             tooltip-placement="right"
+             tooltip-animation="true">
+            <div class="nav-icon sidebar-trans"><span class="{{currentEntry.icon}}"></span></div>
+            <span class="nav-title">{{currentEntry.name}}</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar-loading" ng-if="loadingState"></div>
+</div>

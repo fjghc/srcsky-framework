@@ -1,0 +1,73 @@
+.mail-container {
+    padding:0 15px;
+    /*background-color: #f1f1f1;*/
+}
+
+.mail-toolbar {
+    padding: 9px 0px 9px 20px;
+    border-bottom: 1px solid #ccc;
+    background: #EAEDF1;
+}
+
+.mail-toolbar-left {
+    float: left;
+    width: 180px;
+}
+
+.mail-toolbar .title {
+    font-size: 18px;
+    text-align: left;
+    display: inline-block;
+    width: 160px;
+    color: #dd4b39;
+}
+
+.mail-toolbar .title:hover {
+    text-underline: none;
+}
+
+.mail-toolbar .select-all {
+    width: 76px;
+}
+
+.mail-toolbar .select-all input {
+    margin-top: -1px;
+    float: left;
+    margin-left: 12px;
+}
+
+.mail-toolbar .select-all span {
+    float: left;
+    margin-top: 0px;
+    margin-left: 3px;
+}
+
+.mail-toolbar .refresh {
+    margin-left: 9px;
+    width: 76px;
+}
+
+.mail-sidebar {
+    width: 180px;
+    padding: 20px;
+    position: absolute;
+    top: 51px;
+    bottom: 0px;
+    background: #EAEDF1;
+    border-right: 1px solid #dedede;
+}
+
+.mail-body {
+    position: absolute;
+    left: 180px;
+    top: 50px;
+    right: 0px;
+    bottom: 0px;
+    /*background: #fff;*/
+    padding:100px;
+}
+
+.write-mail {
+    width: 100%;
+}
+

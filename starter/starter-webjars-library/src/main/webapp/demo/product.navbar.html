@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title></title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../styles/css/common/main.css"/>
+  <link rel="stylesheet" href="../styles/css/common/icon.css"/>
+  <link rel="stylesheet" href="../styles/css/common/tools.css"/>
+  <link rel="stylesheet" href="../styles/css/common/type.css"/>
+  <link rel="stylesheet" href="../styles/css/common/product.navbar.css"/>
+</head>
+<body>
+
+<div class="framework-product framework-product-col-1">
+  <div class="framework-product-navbar" ng-if="config.productNavBar != 'disabled'">
+    <!-- product nav -->
+    <div product-navbar></div>
+    <!-- /product nav -->
+  </div>
+  <!-- product nav collapse-->
+  <div class="framework-product-navbar-collapse" ng-click="collapseProductNavbar()" ng-if="config.productNavBar != 'disabled'">
+    <div class="product-navbar-collapse-inner">
+      <div class="product-navbar-collapse-bg"></div>
+      <div class="product-navbar-collapse">
+        <span class="icon-collapse-left"></span>
+        <span class="icon-collapse-right"></span>
+      </div>
+    </div>
+  </div>
+  <!-- /product nav collapse-->
+  <div class="framework-product-body">
+    <!-- product body -->
+    <div ui-view class="console-container" ng-animate="{enter:'fade-enter'}"></div>
+    <!-- /product body -->
+  </div>
+</div>
+<div class="container">
+  <h2>左侧、prodct-navbar <a href="index.html" class="pull-right btn-link">返回</a> </h2>
+  <pre ng-non-bindable>
+    &lt;div sidebar &gt;&lt;/div&gt;
+  </pre>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/requirejs/require.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="../bower_components/angular-bindonce/bindonce.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/product.navbar.js"></script>
+</body>
+</html>

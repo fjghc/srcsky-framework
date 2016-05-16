@@ -1,0 +1,25 @@
+define("common/model/model.system.core", [
+  "angular",
+  "./base",
+  "./model.define.service",
+  "./model.factory",
+  "./biz.model.factory",
+  "./dynamic.states",
+  "./common.biz.controller",
+  "./model.system.base.controller",
+  "./directives/inline.command",
+  "./directives/item.creator",
+  "./directives/item.grid",
+  "./directives/load.item.grid",
+  "./directives/simple.form",
+  "./directives/toolbar",
+  "./directives/consoleUiView",
+  "./directives/bizComponent",
+  "./directives/componentLayout",
+  "./directives/msChart",
+  "./directives/dynamicDirective",
+  "./dynamic.resource.load.service",
+  "./contextService",
+  "./directives/directives"
+], function (e) {
+})

@@ -1,0 +1,48 @@
+<div>
+    <div ng-if="$account.login">
+        <div class="framework-topbar" ng-if="config.showTopbar">
+            <!-- topbar -->
+            <div console-topbar workorder-id="config.workorderId" product-id="config.productId"
+                 topbar-nav-links="config.topbarNavLinks"></div>
+            <!-- /topbar -->
+        </div>
+        <div class="framework-body"
+             ng-class="{'framework-sidebar-mini':config.sidebar == 'mini','framework-sidebar-full': config.sidebar == 'full','framework-topbar-hide':!config.showTopbar}">
+            <div class="framework-sidebar">
+                <!-- sidebar -->
+                <div console-sidebar product-id="{{config.productId}}" type="{{config.sidebar}}"
+                     class="sidebar-content"></div>
+                <!-- /sidebar -->
+            </div>
+            <div class="framework-product"
+                 ng-class="{'framework-product-col-1':config.productNavBar=='col-1','framework-product-col-2': config.productNavBar=='col-2'}">
+                <!-- <div class="framework-product-navbar-bg"></div> -->
+                <div class="framework-product-navbar" ng-if="config.productNavBar != 'disabled'">
+                    <!-- product nav -->
+                    <div product-navbar></div>
+                    <!-- /product nav -->
+                </div>
+                <!-- product nav collapse-->
+                <div class="framework-product-navbar-collapse" ng-click="collapseProductNavbar()"
+                     ng-if="config.productNavBar != 'disabled'">
+                    <div class="product-navbar-collapse-inner">
+                        <div class="product-navbar-collapse-bg"></div>
+                        <div class="product-navbar-collapse">
+                            <span class="icon-collapse-left"></span>
+                            <span class="icon-collapse-right"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /product nav collapse-->
+                <div class="framework-product-body {{config.bodyClass}}">
+                    <!-- product body -->
+                    <div ng-transclude></div>
+                    <!-- /product body -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="config.loading">
+        <div loading size="64"></div>
+    </div>
+</div>

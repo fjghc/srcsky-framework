@@ -1,0 +1,819 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../styles/css/common/icon.css"/>
+    <style type="text/css">
+        span {
+            font-size: 28px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>分页条、pager2 <a href="index.html" class="pull-right btn-link">返回</a></h2>
+  <pre ng-non-bindable>
+    &lt;div pager2 pageInfo="xxx" onSelectPage="xxx"&gt;&lt;/div&gt;
+  </pre>
+    <table class="table table-responsive">
+        <tr>
+            <td>
+                <span class="icon-ons-3"></span>
+                <span class="icon-ons-2"></span>
+                <span class="icon-ons"></span>
+            </td>
+            <td>
+                <span class="icon-ons-3"></span>
+                <span class="icon-ons-2"></span>
+                <span class="icon-ons"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-account"></span>
+            </td>
+            <td>
+                <span class="icon-services"></span>
+            </td>
+            <td>
+                <span class="icon-expense"></span>
+            </td>
+            <td>
+                <span class="icon-redisa-3"></span>
+                <span class="icon-redisa-2"></span>
+                <span class="icon-redisa"></span>
+            </td>
+            <td>
+                <span class="icon-ddos-3"></span>
+            </td>
+            <td>
+                <span class="icon-toolsimage-3"></span>
+                <span class="icon-toolsimage-2"></span>
+                <span class="icon-toolsimage"></span>
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <span class="icon-refresh"></span>
+            </td>
+            <td>
+                <span class="icon-return"></span>
+            </td>
+            <td>
+                <span class="icon-undo"></span>
+            </td>
+            <td>
+                <span class="icon-alipay"></span>
+            </td>
+            <td>
+                <span class="icon-auto-renew"></span>
+            </td>
+            <td>
+                <span class="icon-mobile"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-sls-3"></span>
+                <span class="icon-sls-2"></span>
+                <span class="icon-sls"></span>
+            </td>
+            <td>
+                <span class="icon-upload"></span>
+            </td>
+            <td>
+                <span class="icon-list-open"></span>
+            </td>
+            <td>
+                <span class="icon-pause"></span>
+            </td>
+            <td>
+                <span class="icon-list-close"></span>
+            </td>
+            <td>
+                <span class="icon-circle"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-wo-salepre"></span>
+            </td>
+            <td>
+                <span class="icon-wo-beian"></span>
+            </td>
+            <td>
+                <span class="icon-wo-account"></span>
+            </td>
+            <td>
+                <span class="icon-wo-finance"></span>
+            </td>
+            <td>
+                <span class="icon-square"></span>
+            </td>
+            <td>
+                <span class="icon-left"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-renew-2"></span>
+                <span class="icon-renew"></span>
+            </td>
+            <td>
+                <span class="icon-plus-border"></span>
+            </td>
+            <td>
+                <span class="icon-wo-domain"></span>
+            </td>
+            <td>
+                <span class="icon-wo-email"></span>
+            </td>
+            <td>
+                <span class="icon-wo-host"></span>
+            </td>
+            <td>
+                <span class="icon-wo-sitebuild"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-annex"></span>
+            </td>
+            <td>
+                <span class="icon-warning-2"></span>
+                <span class="icon-warning-1"></span>
+                <span class="icon-warning"></span>
+            </td>
+            <td>
+                <span class="icon-weekly"></span>
+            </td>
+            <td>
+                <span class="icon-yes-2"></span>
+                <span class="icon-yes-1"></span>
+                <span class="icon-yes"></span>
+            </td>
+            <td>
+                <span class="icon-yundun-3"></span>
+                <span class="icon-yundun-2"></span>
+                <span class="icon-yundun"></span>
+            </td>
+            <td>
+                <span class="icon-yunjiankong"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-tree"></span>
+            </td>
+            <td>
+                <span class="icon-unlock"></span>
+            </td>
+            <td>
+                <span class="icon-up"></span>
+            </td>
+            <td>
+                <span class="icon-updown"></span>
+            </td>
+            <td>
+                <span class="icon-viewtable"></span>
+            </td>
+            <td>
+                <span class="icon-vpc-3"></span>
+                <span class="icon-vpc-2"></span>
+                <span class="icon-vpc"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-threshold"></span>
+            </td>
+            <td>
+                <span class="icon-text-free"></span>
+            </td>
+            <td>
+                <span class="icon-snapshot"></span>
+            </td>
+            <td>
+                <span class="icon-setup"></span>
+            </td>
+            <td>
+                <span class="icon-shift-in"></span>
+            </td>
+            <td>
+                <span class="icon-slb-3"></span>
+                <span class="icon-slb-2"></span>
+                <span class="icon-slb"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-regional"></span>
+            </td>
+            <td>
+                <span class="icon-remove-2"></span>
+                <span class="icon-remove-1"></span>
+                <span class="icon-remove"></span>
+            </td>
+            <td>
+                <span class="icon-renew-mgt"></span>
+            </td>
+            <td>
+                <span class="icon-safe-lock"></span>
+            </td>
+            <td>
+                <span class="icon-safetycontrol"></span>
+            </td>
+            <td>
+                <span class="icon-search"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-rds-3"></span>
+                <span class="icon-rds-2"></span>
+                <span class="icon-rds"></span>
+            </td>
+            <td>
+                <span class="icon-ram-3"></span>
+                <span class="icon-ram-2"></span>
+                <span class="icon-ram"></span>
+            </td>
+            <td>
+                <span class="icon-pts-3"></span>
+                <span class="icon-pts-2"></span>
+                <span class="icon-pts"></span>
+            </td>
+            <td>
+                <span class="icon-pen"></span>
+            </td>
+            <td>
+                <span class="icon-performance"></span>
+            </td>
+            <td>
+                <span class="icon-ots-3"></span>
+                <span class="icon-ots-2"></span>
+                <span class="icon-ots"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-oss-3"></span>
+                <span class="icon-oss-2"></span>
+                <span class="icon-oss"></span>
+            </td>
+            <td>
+                <span class="icon-opensearch-3"></span>
+                <span class="icon-opensearch-2"></span>
+                <span class="icon-opensearch"></span>
+            </td>
+            <td>
+                <span class="icon-ons-3"></span>
+                <span class="icon-ons-2"></span>
+                <span class="icon-ons"></span>
+            </td>
+            <td>
+                <span class="icon-odps-3"></span>
+                <span class="icon-odps-2"></span>
+                <span class="icon-odps"></span>
+            </td>
+            <td>
+                <span class="icon-ocs-3"></span>
+                <span class="icon-ocs-2"></span>
+                <span class="icon-ocs"></span>
+            </td>
+            <td>
+                <span class="icon-oas-3"></span>
+                <span class="icon-oas-2"></span>
+                <span class="icon-oas"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-no-2"></span>
+                <span class="icon-no-1"></span>
+                <span class="icon-no"></span>
+            </td>
+            <td>
+                <span class="icon-narrow"></span>
+            </td>
+            <td>
+                <span class="icon-mts-3"></span>
+                <span class="icon-mts-2"></span>
+                <span class="icon-mts"></span>
+            </td>
+            <td>
+                <span class="icon-menu"></span>
+            </td>
+            <td>
+                <span class="icon-mqs-3"></span>
+                <span class="icon-mqs-2"></span>
+                <span class="icon-mqs"></span>
+            </td>
+            <td>
+                <span class="icon-logo"></span>
+                <span class="icon-logo1"></span>
+                <span class="icon-logo9" style="display:inline-block"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-home"></span>
+            </td>
+            <td>
+                <span class="icon-info-2"></span>
+                <span class="icon-info-1"></span>
+                <span class="icon-info"></span>
+            </td>
+            <td>
+                <span class="icon-invite"></span>
+            </td>
+            <td>
+                <span class="icon-jiankong-3"></span>
+                <span class="icon-jiankong-2"></span>
+                <span class="icon-jiankong"></span>
+            </td>
+            <td>
+                <span class="icon-lightcloud-3"></span>
+                <span class="icon-lightcloud-2"></span>
+                <span class="icon-lightcloud"></span>
+            </td>
+            <td>
+                <span class="icon-log"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-ecs-3"></span>
+                <span class="icon-ecs-2"></span>
+                <span class="icon-ecs"></span>
+            </td>
+            <td>
+                <span class="icon-ess-3"></span>
+                <span class="icon-ess-2"></span>
+                <span class="icon-ess"></span>
+            </td>
+            <td>
+                <span class="icon-exec-snapshot-policy"></span>
+            </td>
+            <td>
+                <span class="icon-goback"></span>
+            </td>
+            <td>
+                <span class="icon-graphs"></span>
+            </td>
+            <td>
+                <span class="icon-help-2"></span>
+                <span class="icon-help-1"></span>
+                <span class="icon-help"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-db"></span>
+            </td>
+            <td>
+                <span class="icon-ddos-3"></span>
+                <span class="icon-ddos-2"></span>
+                <span class="icon-ddos"></span>
+            </td>
+            <td>
+                <span class="icon-detail-2"></span>
+                <span class="icon-detail"></span>
+            </td>
+            <td>
+                <span class="icon-disk-image"></span>
+            </td>
+            <td>
+                <span class="icon-dpc-3"></span>
+                <span class="icon-dpc-2"></span>
+                <span class="icon-dpc"></span>
+            </td>
+            <td>
+                <span class="icon-drds-3"></span>
+                <span class="icon-drds-2"></span>
+                <span class="icon-drds"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-clock"></span>
+            </td>
+            <td>
+                <span class="icon-cloudisk2"></span>
+            </td>
+            <td>
+                <span class="icon-db-g"></span>
+            </td>
+            <td>
+                <span class="icon-db-r"></span>
+            </td>
+            <td>
+                <span class="icon-db-sign"></span>
+            </td>
+            <td>
+                <span class="icon-db-t"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-logo2"></span>
+            </td>
+            <td>
+                <span class="icon-cs-2"></span>
+                <span class="icon-cs-3"></span>
+                <span class="icon-cs"></span>
+            </td>
+            <td>
+                <span class="icon-dms-3"></span>
+                <span class="icon-dms-2"></span>
+                <span class="icon-dms"></span>
+            </td>
+            <td>
+
+                <span class="icon-ewh-3"></span>
+                <span class="icon-ewh-2"></span>
+                <span class="icon-ewh"></span>
+            </td>
+            <td>
+                <span class="icon-expressconnect-3"></span>
+                <span class="icon-expressconnect-2"></span>
+                <span class="icon-expressconnect"></span>
+            </td>
+            <td>
+                <span class="icon-hsm-3"></span>
+                <span class="icon-hsm-2"></span>
+                <span class="icon-hsm"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-kuaizhaolian"></span>
+            </td>
+            <td>
+                <span class="icon-mongodb-3"></span>
+                <span class="icon-mongodb-2"></span>
+                <span class="icon-mongodb"></span>
+            </td>
+            <td>
+                <span class="icon-actiontrail-3"></span>
+                <span class="icon-actiontrail-2"></span>
+                <span class="icon-actiontrail"></span>
+            </td>
+            <td>
+                <span class="icon-ats-3"></span>
+                <span class="icon-ats-2"></span>
+                <span class="icon-ats"></span>
+            </td>
+            <td>
+                <span class="icon-cli-3"></span>
+                <span class="icon-cli-2"></span>
+                <span class="icon-cli"></span>
+            </td>
+            <td>
+                <span class="icon-directmail-3"></span>
+                <span class="icon-directmail-2"></span>
+                <span class="icon-directmail"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-eclipse-3"></span>
+                <span class="icon-eclipse-2"></span>
+                <span class="icon-eclipse"></span>
+            </td>
+            <td>
+                <span class="icon-havip-3"></span>
+                <span class="icon-havip-2"></span>
+                <span class="icon-havip"></span>
+            </td>
+            <td>
+                <span class="icon-ros-3"></span>
+                <span class="icon-ros-2"></span>
+                <span class="icon-ros"></span>
+            </td>
+            <td>
+                <span class="icon-visualstudio-3"></span>
+                <span class="icon-visualstudio-2"></span>
+                <span class="icon-visualstudio"></span>
+            </td>
+            <td>
+                <span class="icon-emr-3"></span>
+                <span class="icon-emr-2"></span>
+                <span class="icon-emr"></span>
+            </td>
+            <td>
+                <span class="icon-mss-3"></span>
+                <span class="icon-mss-2"></span>
+                <span class="icon-mss"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-antifraud-3"></span>
+                <span class="icon-antifraud-2"></span>
+                <span class="icon-antifraud"></span>
+            </td>
+            <td>
+                <span class="icon-ddosbasic-3"></span>
+                <span class="icon-ddosbasic-2"></span>
+                <span class="icon-ddosbasic"></span>
+            </td>
+            <td>
+                <span class="icon-aegis-3"></span>
+                <span class="icon-aegis-2"></span>
+                <span class="icon-aegis"></span>
+            </td>
+            <td>
+                <span class="icon-amr-3"></span>
+                <span class="icon-amr-2"></span>
+                <span class="icon-amr"></span>
+            </td>
+            <td>
+                <span class="icon-eip-3"></span>
+                <span class="icon-eip-2"></span>
+                <span class="icon-eip"></span>
+            </td>
+            <td>
+                <span class="icon-xianzhi-3"></span>
+                <span class="icon-xianzhi-2"></span>
+                <span class="icon-xianzhi"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-aps-3"></span>
+                <span class="icon-aps-2"></span>
+                <span class="icon-aps"></span>
+            </td>
+            <td>
+                <span class="icon-batchcompute-3"></span>
+                <span class="icon-batchcompute-2"></span>
+                <span class="icon-batchcompute"></span>
+            </td>
+            <td>
+                <span class="icon-sas-3"></span>
+                <span class="icon-sas-2"></span>
+                <span class="icon-sas"></span>
+            </td>
+            <td>
+                <span class="icon-scan-3"></span>
+                <span class="icon-scan-2"></span>
+                <span class="icon-scan"></span>
+            </td>
+            <td>
+                <span class="icon-waf-3"></span>
+                <span class="icon-waf-2"></span>
+                <span class="icon-waf"></span>
+            </td>
+            <td>
+                <span class="icon-mns-3"></span>
+                <span class="icon-mns-2"></span>
+                <span class="icon-mns"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-expense-i18n"></span>
+            </td>
+            <td>
+                <span class="icon-qrcode"></span>
+            </td>
+            <td>
+                <span class="icon-unfold"></span>
+            </td>
+            <td>
+                <span class="icon-fold"></span>
+            </td>
+            <td>
+                <span class="icon-form"></span>
+            </td>
+            <td>
+                <span class="icon-accelerate"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-vdc-3"></span>
+                <span class="icon-vdc-2"></span>
+                <span class="icon-vdc"></span>
+            </td>
+            <td>
+                <span class="icon-feedback"></span>
+            </td>
+            <td>
+                <span class="icon-new"></span>
+            </td>
+            <td>
+                <span class="icon-collapse-right"></span>
+            </td>
+            <td>
+                <span class="icon-collapse-left"></span>
+            </td>
+            <td>
+                <span class="icon-aec"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-aic"></span>
+            </td>
+            <td>
+                <span class="icon-mobile-2"></span>
+            </td>
+            <td>
+                <span class="icon-amc"></span>
+            </td>
+            <td>
+                <span class="icon-arc"></span>
+            </td>
+            <td>
+                <span class="icon-game"></span>
+            </td>
+            <td>
+                <span class="icon-iot"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-right"></span>
+            </td>
+            <td>
+                <span class="icon-afc"></span>
+            </td>
+            <td>
+                <span class="icon-specs"></span>
+            </td>
+            <td>
+                <span class="icon-pen-2"></span>
+            </td>
+            <td>
+                <span class="icon-key"></span>
+            </td>
+            <td>
+                <span class="icon-bsn"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-cas-3"></span>
+                <span class="icon-cas-2"></span>
+                <span class="icon-cas"></span>
+            </td>
+            <td>
+                <span class="icon-fenxiao"></span>
+            </td>
+            <td>
+                <span class="icon-account-2"></span>
+            </td>
+            <td>
+                <span class="icon-qiyeyouxiang-3"></span>
+                <span class="icon-qiyeyouxiang-2"></span>
+                <span class="icon-qiyeyouxiang"></span>
+            </td>
+            <td>
+                <span class="icon-yuming-3"></span>
+                <span class="icon-yuming-2"></span>
+                <span class="icon-yuming"></span>
+            </td>
+            <td>
+                <span class="icon-yumingyuwangzhan-3"></span>
+                <span class="icon-yumingyuwangzhan-2"></span>
+                <span class="icon-yumingyuwangzhan"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-yunjiexi-3"></span>
+                <span class="icon-yunjiexi-2"></span>
+                <span class="icon-yunjiexi"></span>
+            </td>
+            <td>
+                <span class="icon-yunxunizhuji-3"></span>
+                <span class="icon-yunxunizhuji-2"></span>
+                <span class="icon-yunxunizhuji"></span>
+            </td>
+            <td>
+                <span class="icon-api-3"></span>
+                <span class="icon-api-2"></span>
+                <span class="icon-api"></span>
+            </td>
+            <td>
+                <span class="icon-dpa-3"></span>
+                <span class="icon-dpa-2"></span>
+                <span class="icon-dpa"></span>
+            </td>
+            <td>
+                <span class="icon-lvwang-3"></span>
+                <span class="icon-lvwang-2"></span>
+                <span class="icon-lvwang"></span>
+            </td>
+            <td>
+                <span class="icon-mas-3"></span>
+                <span class="icon-mas-2"></span>
+                <span class="icon-mas"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-dts-3"></span>
+                <span class="icon-dts-2"></span>
+                <span class="icon-dts"></span>
+            </td>
+            <td>
+                <span class="icon-android"></span>
+            </td>
+            <td>
+                <span class="icon-ios"></span>
+            </td>
+            <td>
+                <span class="icon-vitality"></span>
+            </td>
+            <td>
+                <span class="icon-enter"></span>
+            </td>
+            <td>
+                <span class="icon-usableCenter"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-cps-3"></span>
+                <span class="icon-cps-2"></span>
+                <span class="icon-cps"></span>
+            </td>
+            <td>
+                <span class="icon-dfs-3"></span>
+                <span class="icon-dfs-2"></span>
+                <span class="icon-dfs"></span>
+            </td>
+            <td>
+                <span class="icon-edas-3"></span>
+                <span class="icon-edas-2"></span>
+                <span class="icon-edas"></span>
+            </td>
+            <td>
+                <span class="icon-ace-3"></span>
+                <span class="icon-ace-2"></span>
+                <span class="icon-ace"></span>
+            </td>
+            <td>
+                <span class="icon-add-2"></span>
+                <span class="icon-add-1"></span>
+                <span class="icon-add"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-ads-3"></span>
+                <span class="icon-ads-2"></span>
+                <span class="icon-ads"></span>
+            </td>
+            <td>
+                <span class="icon-amplify"></span>
+            </td>
+            <td>
+                <span class="icon-arrow-down"></span>
+            </td>
+            <td>
+                <span class="icon-arrow-left"></span>
+            </td>
+            <td>
+                <span class="icon-arrow-right"></span>
+            </td>
+            <td>
+                <span class="icon-arrow-up"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="icon-backup"></span>
+            </td>
+            <td>
+                <span class="icon-bell"></span>
+            </td>
+            <td>
+                <span class="icon-buy"></span>
+            </td>
+            <td>
+                <span class="icon-calendar"></span>
+            </td>
+            <td>
+                <span class="icon-cdn-3"></span>
+                <span class="icon-cdn-2"></span>
+                <span class="icon-cdn"></span>
+            </td>
+            <td>
+                <span class="icon-cdp-3"></span>
+                <span class="icon-cdp-2"></span>
+                <span class="icon-cdp"></span>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

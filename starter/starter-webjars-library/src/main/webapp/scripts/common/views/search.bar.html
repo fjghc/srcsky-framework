@@ -1,0 +1,79 @@
+<div class="clearfix search-bar">
+    <div class="pull-left">
+        <form class="form-inline" name="form">
+            <div ng-repeat="item in conditions" class="inline-block form-group">
+                <input ng-if="item.type== 'text'" type="text" class="form-control" size="{{item.size||48}}" ng-model="item.value" placeholder="{{item.placeholder}}">
+                <div ng-if="item.type=='texts'">
+                    <select class="form-control" ng-model="item.selected" ng-options="option.text for option in item.options track by option.name"/><input
+                        type="text" class="form-control" size="{{item.size||48}}" ng-model="item.value" placeholder="{{item.selected.placeholder}}" data-ng-disabled="item.selected.name=='default'"
+                        style="border-left: none;">
+                </div>
+                <div ng-if="item.type=='select'">
+                    <select class="form-control" ng-model="item.selected" ng-options="option.text for option in item.options track by option.value"/>
+                </div>
+                <div ng-if="item.type=='date'">
+                    <input type="text"
+                           ng-model="item.value"
+                           max="{{maxDate}}"
+                           class="form-control"
+                           show-weeks="false"
+                           show-button-bar="true"
+                           current-text="今天"
+                           clear-text="清除" close-text="确定"
+                           uib-datepicker-diy-popup="yyyy-MM-dd"
+                           on-open-focus="false"
+                           size="20"
+                           is-open="item.opened"
+                           datepicker-popup-template-url="scripts/common/views/datepicker.popup.html"
+                           datepicker-template-url="scripts/common/views/datepicker.html"
+                           placeholder="{{item.placeholder}}"
+                           ng-click="item.opened=!item.opened"
+                           style="border-right:none">
+                    <button class="btn btn-default" ng-click="item.opened=!item.opened"><i class="glyphicon glyphicon-calendar"></i></button>
+                </div>
+                <div ng-if="item.type=='dateRange'">
+                    <input type="text"
+                           ng-model="item.start.value"
+                           max="{{maxDate}}"
+                           class="form-control"
+                           show-weeks="false"
+                           show-button-bar="true"
+                           current-text="今天"
+                           clear-text="清除" close-text="确定"
+                           uib-datepicker-diy-popup="yyyy-MM-dd"
+                           on-open-focus="false"
+                           is-open="item.start.opened"
+                           datepicker-popup-template-url="scripts/common/views/datepicker.popup.html"
+                           datepicker-template-url="scripts/common/views/datepicker.html"
+                           placeholder="{{item.start.placeholder}}"
+                           ng-click="item.start.opened=!item.start.opened"
+                           size="{{item.start.size}}">&nbsp;-&nbsp;<input type="text"
+                                                                          ng-model="item.end.value"
+                                                                          min-date="{{item.start}}"
+                                                                          class="form-control"
+                                                                          show-weeks="false"
+                                                                          show-button-bar="true"
+                                                                          current-text="今天"
+                                                                          clear-text="清除" close-text="确定"
+                                                                          uib-datepicker-diy-popup="yyyy-MM-dd"
+                                                                          on-open-focus="false"
+                                                                          is-open="item.end.opened"
+                                                                          datepicker-popup-template-url="scripts/common/views/datepicker.popup.html"
+                                                                          datepicker-template-url="scripts/common/views/datepicker.html"
+                                                                          placeholder="{{item.end.placeholder}}"
+                                                                          ng-click="item.end.opened=!item.end.opened"
+                                                                          size="{{item.end.size}}">
+                </div>
+            </div><button class="btn btn-default" data-ng-click="action(conditions.values)">搜索</button>
+        </form>
+    </div>
+    <div class="pull-right toolbar" data-ng-if="toolbars&&toolbars.length>0">
+        <div class="form-inline">
+            <button class="btn btn-default" data-ng-click="clear();action(conditions.values)"><span class="icon-refresh"></span> 刷新</button><button
+                class="btn" data-ng-class="{'btn-default':button.type==undefined,'btn-primary':button.type=='primary','btn-danger':button.type=='danger'}"
+                    data-ng-repeat="button in toolbars" data-ng-click="handle(button)">
+                <span data-ng-class="button.icon" data-ng-if="button.icon"></span> {{button.text}}
+            </button>
+        </div>
+    </div>
+</div>

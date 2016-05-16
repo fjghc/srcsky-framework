@@ -1,0 +1,6 @@
+# ◊‘∂Ø≈‰÷√ Spring Session,Spring Mvc Spring Controller
+#com.srcsky.framework.spring.config.RedisHttpSessionConfiguration
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=
+#com.srcskyframework.starter.mvc.MvcAutoConfiguration,
+#com.srcskyframework.starter.db.DbAutoConfiguration,
+#com.srcskyframework.starter.session.SessionAutoConfiguration

@@ -1,0 +1,44 @@
+.common-tree {
+    /* prevent user selection */
+    -moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;-ms-user-select: none;user-select: none;font-family: Verdana, Helvetica, Arial, sans-serif;font-size:13px;color: #555;text-decoration: none;
+}
+.common-tree ul {margin: 0;padding: 0;list-style: none;border: none;overflow: hidden; margin-left: 2px;}
+.common-tree li {position: relative;padding: 0 0 0 18px;line-height: 18px;}
+/*tree-collapsed */
+.common-tree li.tree-expanded i.tree-leaf-head, .common-tree li.tree-collapsed i.tree-leaf-head {display:none;}
+.common-tree li.tree-expanded i.tree-branch-head, .common-tree li.tree-collapsed i.tree-branch-head {display:inline;}
+.common-tree li.tree-leaf i.tree-branch-head {display:none;}
+.common-tree li.tree-leaf i.tree-leaf-head {display:inline;}
+.common-tree li i.tree-branch-head {cursor: pointer;}
+.common-tree li .tree-label {cursor: pointer;display: inline;}
+.common-tree li .tree-unselectable {cursor: not-allowed;}
+.common-tree.classic ul.tree-root{background: none;margin-left: 0px;}
+.common-tree.classic li.tree-root-item{background: url("../../../styles/img/tree/root.gif") no-repeat; padding-left: 19px;}
+.common-tree.classic ul{background: url("../../../styles/img/tree/line.gif") repeat-y;}
+.common-tree.classic li{background: url("../../../styles/img/tree/join.gif") no-repeat;}
+.common-tree.classic li.tree-expanded{background: url("../../../styles/img/tree/minus.gif") no-repeat}
+.common-tree.classic li.tree-expanded.tree-expanded-last{background:#fff url("../../../styles/img/tree/minusbottom.gif") no-repeat}
+.common-tree.classic li.tree-expanded i.tree-branch-head {padding: 1px 10px;background: url("../../../styles/img/tree/folderopen.gif") no-repeat;}
+.common-tree.classic li.tree-collapsed{background: url("../../../styles/img/tree/plus.gif") no-repeat;}
+.common-tree.classic li.tree-collapsed.tree-collapsed-last{background:#fff url("../../../styles/img/tree/plusbottom.gif") no-repeat;}
+.common-tree.classic li.tree-collapsed i.tree-branch-head {padding: 1px 10px;background: url("../../../styles/img/tree/folder.gif") no-repeat;}
+.common-tree.classic li.tree-leaf i.tree-leaf-head {padding: 1px 10px;background: url("../../../styles/img/tree/page.gif") no-repeat;}
+.common-tree.classic li.tree-leaf.tree-leaf-last{background:#fff url("../../../styles/img/tree/joinbottom.gif") no-repeat}
+.common-tree.classic li .tree-selected {/*background-color: #aaddff;*/font-weight: bold;color: #416AA3}
+.common-tree.classic li .tree-unselectable {color: #ddd;}
+
+.common-tree.empty ul {margin-left: 0px;}
+.common-tree.empty ul.tree-root{background: none;margin-left: 0px;}
+.common-tree.empty li.tree-root-item{background: url("../../../styles/img/tree/root.gif") no-repeat;}
+.common-tree.empty li.tree-expanded i.tree-branch-head {padding: 1px 10px;background: url("../../../styles/img/tree/down.gif") no-repeat center;}
+.common-tree.empty li.tree-collapsed{}
+.common-tree.empty li.tree-collapsed i.tree-branch-head {padding: 1px 10px;background: url("../../../styles/img/tree/right.gif") no-repeat center;}
+.common-tree.empty li.tree-leaf i.tree-leaf-head {padding: 1px 10px;background: url("../../../styles/img/tree/page.gif") no-repeat;}
+.common-tree.empty li .tree-selected {/*background-color: #aaddff;*/font-weight: bold;color: #416AA3}
+.common-tree.empty li .tree-unselectable {color: #ddd;}
+.common-tree.empty li{padding-left:0px}
+.common-tree.empty li div.title,
+.common-tree.empty li div.items{padding-left:18px;}
+.common-tree.empty li div.title{padding-top: 3px;padding-bottom: 3px;}
+.common-tree.empty li div.title:hover{background: #EAEDF1;}
+.common-tree.empty li .tree-selected {font-weight: normal}

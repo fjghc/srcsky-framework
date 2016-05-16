@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title></title>
+  <style>
+    html {
+      background-color: #fff
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font: 14px "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei"
+    }
+
+    .top-bar {
+      background: #fff;
+      height: 70px;
+      border-bottom: 1px solid #e1e6eb;
+      padding: 0 15px
+    }
+
+    .top-bar .title {
+      font-size: 12px;
+      color: #333;
+      line-height: 70px
+    }
+
+    .top-bar .close {
+      float: right;
+      height: 100%;
+      width: auto
+    }
+
+    .top-bar .close .close-btn {
+      margin-top: 29px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url(//gtms04.alicdn.com/tps/i4/TB1OztzIVXXXXb_XpXX4H4m.FXX-126-28.png) -113px -8px
+    }
+
+    .head-content {
+      background-color: #FFF;
+      padding: 15px 10px 0
+    }
+
+    .head-content .btn-container {
+      width: 33.33333%;
+      float: left;
+      padding: 5px
+    }
+
+    .head-content .btn-container .btn {
+      padding: 0 16px;
+      display: block;
+      border: 1px solid #7ecef4;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-size: 12px;
+      color: #333;
+      height: 60px;
+      line-height: 60px;
+      background-color: #FFF;
+      vertical-align: middle;
+      overflow: hidden
+    }
+
+    .head-content .btn-container .btn:hover {
+      background-color: #f8f8f8
+    }
+
+    .head-content .btn-container .btn:active {
+      background-color: #f1f7fa
+    }
+
+    .head-content .btn-container .btn .btn-icon {
+      float: left;
+      margin: 13px 6px 0 0;
+      zoom: 1;
+      width: 32px;
+      height: 32px;
+      background: url(//gtms04.alicdn.com/tps/i4/TB1OztzIVXXXXb_XpXX4H4m.FXX-126-28.png) no-repeat;
+      vertical-align: middle
+    }
+
+    .head-content .btn-container .btn .btn-icon.icon-bubble {
+      background-position: 0 2px
+    }
+
+    .head-content .btn-container .btn .btn-icon.icon-doc {
+      background-position: -40px 2px
+    }
+
+    .head-content .btn-container .btn .btn-icon.icon-circle {
+      background-position: -76px 2px
+    }
+
+    .head-content:after {
+      display: block;
+      content: '';
+      clear: both
+    }
+
+    .search-content {
+      background-color: #FFF;
+      padding: 15px 15px 0
+    }
+
+    .search-content .search-title {
+      font-size: 12px;
+      padding-bottom: 12px
+    }
+
+    .search-content .search-container .search-box {
+      overflow: visible;
+      margin-right: 60px;
+      position: relative
+    }
+
+    .search-content .search-container .search-box input {
+      padding: 8px;
+      width: 100%;
+      height: 32px;
+      line-height: 32px;
+      border: 1px solid #ccc;
+      background-color: #fff
+    }
+
+    .search-content .search-container .search-box .help-tip {
+      position: absolute;
+      z-index: 100;
+      margin: 0;
+      padding: 0;
+      top: 44px;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #00a2ca;
+      list-style: none;
+      display: none
+    }
+
+    .search-content .search-container .search-box .help-tip li {
+      list-style: none;
+      padding: 5px 10px;
+      cursor: pointer
+    }
+
+    .search-content .search-container .search-box .help-tip li.action {
+      color: #00a2ca;
+      background: #f1f6fa
+    }
+
+    .search-content .search-container .search-btn {
+      border: 1px solid #ddd;
+      background-color: #f7f7f7;
+      display: block;
+      float: right;
+      padding: 0 10px;
+      line-height: 32px;
+      height: 32px;
+      color: #333;
+      text-decoration: none
+    }
+
+    .search-content .search-container .search-btn:active, .search-content .search-container .search-btn:hover, .search-content .search-container .search-btn:visited {
+      color: #333;
+      text-decoration: none
+    }
+
+    .search-content .search-container .search-btn:active {
+      background-color: #e7e7e7
+    }
+
+    .hot-question-content {
+      padding: 15px;
+      background-color: #fff
+    }
+
+    .hot-question-content .question-title {
+      font-size: 12px;
+      padding-bottom: 12px
+    }
+
+    .hot-question-content .show-more {
+      float: right;
+      color: #09c
+    }
+
+    .hot-question-content .show-more:active, .hot-question-content .show-more:hover, .hot-question-content .show-more:visited {
+      color: #09c
+    }
+
+    .hot-question-content ul {
+      margin: 0;
+      padding: 0
+    }
+
+    .hot-question-content ul li {
+      list-style-type: none;
+      padding: 1px;
+      height: 36px
+    }
+
+    .hot-question-content ul li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #f1f7fa;
+      font-size: 12px;
+      line-height: 36px;
+      padding: 0 18px;
+      color: #333;
+      text-decoration: none
+    }
+
+    a {
+      color: #00B7FF;
+      text-decoration: none
+    }
+
+    body,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .h-product-intro {
+      font-size: 12px;
+      margin: 15px;
+      border: 1px solid #e5e5e5;
+      padding: 15px 15px 10px 15px;
+    }
+
+    .intro-header {
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    .intro-header .intro-title {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .intro-header .intro-title em {
+      font-size: 12px;
+      color: #f30;
+      font-weight: bolder;
+      font-style: normal;
+      margin: 0 4px;
+    }
+
+    .h-product-intro .intro-link {
+      float: right;
+      text-decoration: none;
+      color: #09c;
+    }
+
+    .h-product-intro .intro-link:hover,
+    .h-product-intro .intro-link:active,
+    .h-product-intro .intro-link:visited {
+      text-decoration: underline;
+    }
+
+    .intro-content:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .intro-content li {
+      float: left;
+      width: 33.3333%;
+      line-height: 26px;
+    }
+
+    .intro-content li a {
+      text-decoration: none;
+      color: #09c;
+    }
+
+    .intro-content li a:hover,
+    .intro-content li a:active,
+    .intro-content li a:visited {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+  <div class="head-content">
+  </div>
+  <div class="search-content">
+    <div class="search-title">搜索问题:</div>
+    <div class="help-search search-container">
+      <a class="submit search-btn" type="submit" href="javascript:void(0);">搜索</a>
+      <div class="search-box">
+        <input placeholder="输入您想搜索的帮助关键词，如“配置云服务器”">
+        <ul class="help-tip"></ul>
+      </div>
+    </div>
+  </div>
+  <div class="hot-question-content">
+    <div class="question-title">
+      您可能遇到的问题:
+      <a href="javascript:void(0)" target="_blank" class="show-more">查看更多</a>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

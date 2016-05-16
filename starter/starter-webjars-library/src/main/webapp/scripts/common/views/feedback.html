@@ -1,0 +1,37 @@
+<div class="feedback-container">
+  <div class="feedback-trigger" ng-click="open();">
+    <span class="feedback-trigger-text">打开反馈</span>
+    <span class="feedback-trigger-icon"><i class="icon-feedback"></i></span>
+  </div>
+  <div class="feedback" ng-if="formPanel">
+    <div class="feedback-panel">
+      <div class="feedback-title"><h1>系统意见反馈</h1><span ng-click="close()" class="feedback-close"><i class="icon-no"></i></span></div>
+      <div class="feedback-content">
+        <h2><span class="must">*</span> 反馈内容（必填）</h2>
+        <textarea ng-model="feedback.content" placeholder="欢迎提出您在使用系统过程中遇到的问题或对系统的宝贵意见(400字以内)，感谢您的支持。"></textarea>
+        <div class="feedback-content-count">
+          <span ng-show="checkContent()">还可以输入<span ng-bind="400-feedback.content.length"></span>个字符</span>
+          <span ng-show="!checkContent()" style="color:red">已经超过<span ng-bind="feedback.content.length - 400"></span></span>
+        </div>
+      </div>
+      <div class="feedback-contact">
+        <h2>联系邮箱</h2>
+        <input placeholder="请留下您的联系邮箱，以便我们及时回复您" ng-model="feedback.email" ng-change="checkEmail()">
+        <span ng-show="emailError" class="inputError">邮箱格式有误，可能无法回复您</span>
+      </div>
+      <div class="feedback-footer">
+        <a class="submit-btn disabled" ng-show="!(feedback.content && 400-feedback.content.length > 0)">提交</a>
+        <a class="submit-btn" ng-show="feedback.content && 400-feedback.content.length > 0" ng-click="postFeedback()" href="javascript:;">提交</a>
+      </div>
+    </div>
+  </div>
+  <div class="feedback" ng-if="resultPanel">
+    <div class="feedback-panel">
+      <div class="feedback-content">
+        <div class="feedback-title"><h1>系统意见反馈</h1><span ng-click="close();" class="feedback-close"><i class="icon-no"></i></span></div>
+        <div style="margin: 30px 0 30px"><span class="feedback-check"><i class="icon-yes-1"></i></span> <a class="thanks">感谢您的反馈</a></div>
+        <div class="feedback-footer"><a class="submit-btn" ng-click="close();">确定</a></div>
+      </div>
+    </div>
+  </div>
+</div>

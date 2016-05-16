@@ -1,0 +1,11 @@
+<div>
+    <ul class="selector-list">
+        <li ng-repeat="option in _options | filter:filterBy" class="selector-item" ng-click="onSelectOption(option)"
+            ng-class="{disabled:option.disabled,active:option._active}">
+            <span compile="option.label"></span>
+        </li>
+    </ul>
+    <div ng-if="showMsg" ng-click="load()" class="selector-msg" ng-bind-html="message"></div>
+</div>
+
+'

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.srcskyframework</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.srcskyframework</groupId>
+    <artifactId>starter-client</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.srcskyframework</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.srcskyframework</groupId>
+            <artifactId>starter-db</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.srcskyframework</groupId>
+            <artifactId>starter-dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.srcskyserver</groupId>
+            <artifactId>space-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.srcskyserver</groupId>
+            <artifactId>user-client</artifactId>
+        </dependency>
+    </dependencies>
+</project>

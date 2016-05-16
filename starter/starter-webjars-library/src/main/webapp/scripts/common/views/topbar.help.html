@@ -1,0 +1,10 @@
+<div class="console-topbar-help">
+  <div class="topbar-help-inner" ng-class="{'topbar-help-show':show}">
+    <div class="topbar-help-head"><span ng-bind="config.title"></span>
+      <span class="icon-no topbar-help-close" ng-click="hidePanel()"></span>
+    </div>
+    <div class="topbar-help-body" ng-if="config.link">
+      <iframe class="topbar-help-iframe" name="topbarHelpIframe" width="486" frameborder="0" ng-src="{{config.link}}"></iframe>
+    </div>
+  </div>
+</div>

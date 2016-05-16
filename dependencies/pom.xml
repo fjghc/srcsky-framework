@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.0.M1</version>
+        <relativePath></relativePath>
+    </parent>
+
+    <groupId>com.srcskyframework</groupId>
+    <artifactId>dependencies</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!--变量信息配置 -->
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.test.skip>true</maven.test.skip>
+        <version.apache.commons.fileupload>1.2.2</version.apache.commons.fileupload>
+        <version.apache.httpcomponents.httpclient>4.4.1</version.apache.httpcomponents.httpclient>
+        <version.pinyin4j>2.5.1</version.pinyin4j>
+        <version.htmlcleaner>2.2</version.htmlcleaner>
+        <commons-beanutils>1.9.2</commons-beanutils>
+        <mysql.version>5.1.22</mysql.version>
+        <querydsl.version>4.0.8</querydsl.version>
+        <srcsky.querydsl.version>0.0.1-SNAPSHOT</srcsky.querydsl.version>
+        <spring.boot.version>1.4.0.M1</spring.boot.version>
+        <h2.version>1.4.191</h2.version>
+        <dubbo.version>2.5.3</dubbo.version>
+        <zookeeper.version>3.4.8</zookeeper.version>
+        <javax.persistence.version>1.0.0.Final</javax.persistence.version>
+        <zkclient.version>0.1</zkclient.version>
+        <version.javassist>3.15.0-GA</version.javassist>
+
+        <!-- srcsky-framework-->
+        <srcsky.core.version>0.0.1-SNAPSHOT</srcsky.core.version>
+
+        <!-- srcsky-starter-->
+        <srcsky.starter.autoconfigure.version>0.0.1-SNAPSHOT</srcsky.starter.autoconfigure.version>
+        <srcsky.starter.db.version>0.0.1-SNAPSHOT</srcsky.starter.db.version>
+        <srcsky.starter.dubbo.version>0.0.1-SNAPSHOT</srcsky.starter.dubbo.version>
+        <srcsky.starter.session.version>0.0.1-SNAPSHOT</srcsky.starter.session.version>
+        <srcsky.starter.kafka.version>0.0.1-SNAPSHOT</srcsky.starter.kafka.version>
+        <srcsky.starter.service.version>0.0.1-SNAPSHOT</srcsky.starter.service.version>
+        <srcsky.starter.server.version>0.0.1-SNAPSHOT</srcsky.starter.server.version>
+        <srcsky.starter.client.version>0.0.1-SNAPSHOT</srcsky.starter.client.version>
+        <srcsky.starter.webjars.library.version>0.0.1-SNAPSHOT</srcsky.starter.webjars.library.version>
+
+        <!-- srcsky-thirdparty -->
+        <srcsky.thirdparty.version>0.0.1-SNAPSHOT</srcsky.thirdparty.version>
+
+        <!-- srcsky-server-->
+        <srcsky.server.space.version>0.0.1-SNAPSHOT</srcsky.server.space.version>
+        <srcsky.server.user.version>0.0.1-SNAPSHOT</srcsky.server.user.version>
+        <srcsky.server.file.version>0.0.1-SNAPSHOT</srcsky.server.file.version>
+        <srcsky.server.sso.version>0.0.1-SNAPSHOT</srcsky.server.sso.version>
+        <srcsky.server.auth.version>0.0.1-SNAPSHOT</srcsky.server.auth.version>
+        <srcsky.server.im.version>0.0.1-SNAPSHOT</srcsky.server.im.version>
+        <srcsky.server.weixin.version>0.0.1-SNAPSHOT</srcsky.server.weixin.version>
+        <srcsky.server.h5.version>0.0.1-SNAPSHOT</srcsky.server.h5.version>
+        <srcsky.server.workflow.version>0.0.1-SNAPSHOT</srcsky.server.workflow.version>
+        <srcsky.server.demo.version>0.0.1-SNAPSHOT</srcsky.server.demo.version>
+
+    </properties>
+
+
+    <dependencies>
+        <!-- Add typical dependencies for a web application -->
+        <!-- Spring Web -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>-->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>-->
+        <!-- Spring Redis -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <scope>compile</scope>
+        </dependency>-->
+        <!-- Spring Session -->
+        <!--<dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session</artifactId>
+            <scope>compile</scope>
+        </dependency>-->
+        <!-- Spring Test -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>-->
+        <!-- Spring Security-->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifact
+            <optional>true</optional>Id>
+        </dependency>-->
+        <!-- Spring Freemarker -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>-->
+        <!-- Spring Mongodb -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>-->
+        <!-- Spring Redis -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>-->
+        <!-- Spring Websocket -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>-->
+        <!-- Spring Rest -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+            <optional>true</optional>
+        </dependency>-->
+        <!-- Spring Messaging -->
+        <!--<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+        </dependency>-->
+        <!-- querydsl -->
+        <!--<dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-apt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.querydsl</groupId>
+            <artifactId>querydsl-collections</artifactId>
+        </dependency>-->
+        <!-- MySql Drivers-->
+        <!--<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>-->
+        <!-- Alibaba Dubbo -->
+        <!--<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>-->
+        <!-- Javax Jpa Api -->
+        <!--<dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+        </dependency>-->
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>1.0.0.M2</version>
+            </dependency>
+            <!-- ======================================================================================================= -->
+            <!-- srcsky framework -->
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>core</artifactId>
+                <version>${srcsky.core.version}</version>
+            </dependency>
+            <!-- ======================================================================================================= -->
+            <!-- srcsky starter -->
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-autoconfigure</artifactId>
+                <version>${srcsky.starter.autoconfigure.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-db</artifactId>
+                <version>${srcsky.starter.db.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-dubbo</artifactId>
+                <version>${srcsky.starter.dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-session</artifactId>
+                <version>${srcsky.starter.session.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-kafka</artifactId>
+                <version>${srcsky.starter.kafka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-service</artifactId>
+                <version>${srcsky.starter.service.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-server</artifactId>
+                <version>${srcsky.starter.server.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-client</artifactId>
+                <version>${srcsky.starter.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>starter-webjars-library</artifactId>
+                <version>${srcsky.starter.webjars.library.version}</version>
+            </dependency>
+            <!-- ======================================================================================================= -->
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>thirdparty</artifactId>
+                <version>${srcsky.thirdparty.version}</version>
+            </dependency>
+            <!-- srcsky server client -->
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>space-client</artifactId>
+                <version>${srcsky.server.space.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>file-client</artifactId>
+                <version>${srcsky.server.file.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>user-client</artifactId>
+                <version>${srcsky.server.user.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>sso-client</artifactId>
+                <version>${srcsky.server.sso.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>auth-client</artifactId>
+                <version>${srcsky.server.auth.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>im-client</artifactId>
+                <version>${srcsky.server.im.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>weixin-client</artifactId>
+                <version>${srcsky.server.weixin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>h5-client</artifactId>
+                <version>${srcsky.server.h5.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>workflow-client</artifactId>
+                <version>${srcsky.server.workflow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyserver</groupId>
+                <artifactId>demo-client</artifactId>
+                <version>${srcsky.server.demo.version}</version>
+            </dependency>
+
+            <!-- ======================================================================================================= -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.1-api</artifactId>
+                <version>${javax.persistence.version}</version>
+            </dependency>
+            <!-- H2 Database-->
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+            </dependency>
+            <!-- Mysql Drivers-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--=========================== Apache Commons ==============================================================-->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${version.apache.commons.fileupload}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${version.apache.httpcomponents.httpclient}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils}</version>
+            </dependency>
+            <!--============================= Pinyin4j ================================================================-->
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>${version.pinyin4j}</version>
+
+            </dependency>
+            <!--============================= Html Clear ================================================================-->
+            <dependency>
+                <groupId>net.sourceforge.htmlcleaner</groupId>
+                <artifactId>htmlcleaner</artifactId>
+                <version>${version.htmlcleaner}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.srcskyframework</groupId>
+                <artifactId>querydsl-core</artifactId>
+                <version>${srcsky.querydsl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-core</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-jpa</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-apt</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-collections</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${version.javassist}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>repo1-maven</id>
+            <url>http://repo1.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>central-maven</id>
+            <url>http://central.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>git-releases</id>
+            <url>https://raw.githubusercontent.com/z82422/repository/master/releases/</url>
+        </repository>
+        <repository>
+            <id>git-snapshots</id>
+            <url>https://raw.githubusercontent.com/hengyunabc/repository/master/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/snapshot</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <distributionManagement>
+        <repository>
+            <id>git-releases</id>
+            <url>file:/D:/work/z82422/repository/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>git-snapshots</id>
+            <url>file:/D:/work/z82422/repository/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

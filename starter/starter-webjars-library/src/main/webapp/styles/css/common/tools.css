@@ -1,0 +1,83 @@
+
+.console-datepicker {padding: 8px}
+.console-datepicker thead .h6 th {padding-top: 8px}
+.console-datepicker tbody tr:first-child td {padding-top: 8px}
+.console-datepicker tbody .btn {border: 0px !important}
+.console-datepicker tbody .btn:hover {background: #F3F3F3}
+.console-datepicker tbody .btn-default {background: transparent}
+.console-datepicker tbody .active, .console-datepicker tbody .active:hover, .console-datepicker tbody .active span {background: #3C0;color: #FFF}
+.console-datepicker tbody .btn[disabled="disabled"] .btn[disabled="disabled"] span {color: #CCC}
+.console-datepicker em {font-size: 12px;color: #ACD}
+
+
+.uib-tooltip-diy {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  visibility: visible;
+}
+
+.uib-tooltip-diy .tooltip-inner {
+  max-width: 300px;
+  padding: 12px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0 0;
+  background-color: #425160
+}
+
+.uib-tooltip-diy .tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid
+}
+
+.uib-tooltip-diy.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90)
+}
+
+.uib-tooltip-diy.top {
+  padding-bottom: 10px;
+}
+
+.uib-tooltip-diy.top .tooltip-arrow {
+  left: 50%;
+  bottom:5px;
+  border-top-color: #425160;
+  border-width: 5px 5px 0 5px
+}
+
+
+.uib-tooltip-diy.bottom {
+  padding-bottom: 10px;
+}
+
+.uib-tooltip-diy.bottom .tooltip-arrow {
+  left: 44%;
+  top:-5px;
+  border-bottom-color: #425160;
+  border-width: 0px 5px 5px 5px
+}
+
+.uib-tooltip-diy.right {
+  padding-left: 10px;
+}
+
+.uib-tooltip-diy.right .tooltip-arrow {
+  top: 40%;
+  left:0px;
+  border-right-color: #425160;
+  border-width: 5px 5px 5px 5px
+}
+
+.help-block {
+  margin: 4px 0px;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>com.srcskyframework</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.srcskyframework</groupId>
+    <artifactId>starter</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>starter-autoconfigure</module>
+        <module>starter-db</module>
+        <module>starter-kafka</module>
+        <module>starter-dubbo</module>
+        <module>starter-session</module>
+        <module>starter-server</module>
+        <module>starter-service</module>
+        <module>starter-client</module>
+        <module>starter-webjars-library</module>
+    </modules>
+
+</project>

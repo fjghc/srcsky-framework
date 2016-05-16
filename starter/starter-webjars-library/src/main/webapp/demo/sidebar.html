@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title></title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../styles/css/common/main.css"/>
+  <link rel="stylesheet" href="../styles/css/common/icon.css"/>
+  <link rel="stylesheet" href="../styles/css/common/tools.css"/>
+  <link rel="stylesheet" href="../styles/css/common/type.css"/>
+  <link rel="stylesheet" href="../styles/css/common/sidebar.css"/>
+  <link rel="stylesheet" href="../styles/css/common/product.navbar.css"/>
+</head>
+<body>
+<div class="framework-body framework-topbar-hide framework-sidebar-full"
+     ng-class="{'viewFramework-sidebar-mini':config.sidebar == 'mini','viewFramework-sidebar-full': config.sidebar == 'full','viewFramework-topbar-hide':!config.showTopbar}">
+  <div class="framework-sidebar">
+    <!-- sidebar -->
+    <div console-sidebar product-id="{{config.productId}}" type="{{config.sidebar}}" class="sidebar-content"></div>
+    <!-- /sidebar -->
+  </div>
+  <div class="framework-product">
+    <div class="container">
+      <h2>左侧、sidebar <a href="index.html" class="pull-right btn-link">返回</a></h2>
+      <pre ng-non-bindable>
+        &lt;div sidebar &gt;&lt;/div&gt;
+      </pre>
+    </div>
+  </div>
+</div>
+
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/requirejs/require.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="js/sidebar.js"></script>
+</body>
+</html>

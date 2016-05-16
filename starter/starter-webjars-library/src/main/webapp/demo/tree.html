@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title></title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../styles/css/common/main.css"/>
+  <link rel="stylesheet" href="../styles/css/common/icon.css"/>
+  <link rel="stylesheet" href="../styles/css/common/tools.css"/>
+  <link rel="stylesheet" href="../styles/css/common/type.css"/>
+  <link rel="stylesheet" href="../styles/css/common/tree.css"/>
+</head>
+<body>
+<div class="container">
+  <h2>树、tree <a href="index.html" class="pull-right btn-link">返回</a> </h2>
+  <pre ng-non-bindable>
+    &lt;div tree class="common-tree classic" tree-model="treedata" on-selection="showSelected(node)" options="opts" &gt;&lt;/div&gt;
+  </pre>
+  <hr/>
+  <div ng-controller="DemoController as vm">
+    <div tree class="common-tree classic" tree-model="treedata" on-selection="showSelected(node)" options="opts">
+      {{node.label}}
+    </div>
+    <br/>
+    <button ng-click="addChild()">添加节点</button>
+  </div>
+</div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/requirejs/require.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="../bower_components/angular-bindonce/bindonce.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/tree.js"></script>
+</body>
+</html>

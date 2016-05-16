@@ -1,0 +1,27 @@
+<div class="shuttle clearfix">
+    <div class="shuttle-selector pull-left" data-ng-class="{'search-show':!searchDisabled}">
+        <div class="title">
+            <div class="title-column-left" ng-bind-html="options.lTitle"></div>
+        </div>
+        <div class="search" data-ng-if="!searchDisabled">
+            <select select2="select2Options"></select>
+        </div>
+        <div selector message-empty="{{options.emptyMsg}}" options="options.list" values="selectedList" multi="true"  status="status" class="left-selector selector">
+        </div>
+    </div>
+    <div class="selector-group-options pull-left">
+        <button class="btn btn-sm btn-default" ng-click="addItems()" ng-disabled="addDisabled">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </button>
+        <button class="btn btn-sm btn-default" ng-click="removeItems()" ng-disabled="dropDisabled">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </button>
+    </div>
+    <div class="shuttle-response pull-right">
+        <div class="title">
+            <div class="title-column-left" ng-bind-html="options.rTitle"></div>
+        </div>
+        <div selector options="options.values" values="cancelList" multi="true" class="right-selector selector selector-status-empty">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="console-topbar-book">
+    <div class="topbar-book-inner"
+         ng-class="{'topbar-book-show': !isSidebarFold,'topbar-book-show-min':isSidebarFold,'topbar-book-inner-max':showDetail}">
+        <div class="topbar-book-head"><span>通讯录</span>
+            <span class="icon-no topbar-book-close" ng-click="hidePanel()"></span>
+        </div>
+        <div class="topbar-book-body">
+            <div class="struct-box">
+                <div class="search-box">
+                    <input placeholder="输入姓名简称，如 xujk、xuhf " type="text">
+                </div>
+                <div tree class="common-tree empty  " tree-model="treedata" options="opts">
+                    {{node.label}}
+                </div>
+            </div>
+            <div class="people-box">
+                <img src="http://plas.powerlong.com/app/download.action?fileName=20100525172928YMEv.bmp&realFileName=%E9%99%88%E8%8E%B9.bmp&bizModuleCd=uaapUser"/>
+                <hr/>
+                <a href="javascript:void(0)"class=" btn-link" ng-click="closeDetail()">关闭详情</a>
+            </div>
+        </div>
+    </div>
+</div>

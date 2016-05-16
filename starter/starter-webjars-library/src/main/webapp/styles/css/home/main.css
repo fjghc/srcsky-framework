@@ -1,0 +1,16 @@
+.framework-product {
+    /*background: #eaedf1*/
+}
+
+.home-container {
+    background: #eaedf1;
+    color: #333;
+    font-weight: 200;
+    min-width: 900px
+}
+
+.home-container ul, .home-container ol {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
